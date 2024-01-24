@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&family=Poppins:ital,wght@0,400;1,400;1,500&family=Titillium+Web:wght@400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::after::before {
+    margin: 0em;
+    padding: 0em;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(237, 237, 237, 0.283);
+    font-family: 'Poppins';
+    max-width: 100%;
+    margin: 0em;
+    padding: 0em;
+    max-height: 100%;
+    font-weight: 400;
+    overflow-x: hidden;
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+}
+@-moz-document url-prefix() { /* Disable scrollbar Firefox */
+    html{
+      scrollbar-width: none;
+    }
+  }
+  body { 
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
+     overflow-y: scroll;
+  }
+/* scroll bar hide */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+.mb-hide {
+    @apply hidden xl:block lg:block sm:block md:block
+}
+
+.desktop-hide {
+    @apply block xl:hidden lg:hidden sm:hidden md:hidden
+}
+
+.tablet-hide {
+    @apply hidden xl:hidden lg:hidden sm:block md:hidden
+}
+
+.nav_items>li {
+    display: inline-block;
+    padding: 5px;
+    /* font-size: 14px; */
+    font-family: 'poppins';
+}
+
+.head {
+    @apply text-[30px] font-bold
+}
+
+.inline_wrap>li {
+    display: inline-block;
+    padding: 4px;
+    font-size: 16px;
+    font-family: 'poppins';
+}
+
+.para {
+    @apply xl:text-[16px] text-xs
+}
+
+.btn {
+    padding: 10px 22px;
+}
+
+.bg_most {
+    background-image: url(./assets/images/WITHOUT_LOGO.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden !important;
+}
+
+/* media query is given */
+@media (max-width: 600px) {
+    body {
+        max-width: 100em;
+        margin: 0em;
+        padding: 0em;
+        max-height: 100em;
+        overflow-x: hidden;
+    }
+
+    .image-gallery-content .image-gallery-slide .image-gallery-image {
+        max-height: 250px;
+    }
+
+    .head {
+        font-size: 18px;
+    }
+
+    .bg_most {
+        width: 100%;
+        height: 400px;
+    }
+
+}
+
+.image-gallery-left-nav {
+    display: none;
+}
+
+.image-gallery-right-nav {
+    display: none;
+}
+
+.image-gallery-play-button {
+    display: none;
+}
+
+.image-gallery-fullscreen-button {
+    display: none;
+}

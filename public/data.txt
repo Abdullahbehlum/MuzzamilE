@@ -1,0 +1,40 @@
+import React, { useState } from 'react'
+import { useParams } from 'react-router-dom';
+import Shoesimgdetails2 from "../../../assets/images/"
+import Shoesimgd2 from "../../../assets/images/"
+import Shoesimgdetails3 from "../../../assets/images/"
+const MenShoesD4 = [
+  {
+     images: [
+      {
+        original: Shoesimgdetails2,
+        thumbnail: Shoesimgdetails2,
+      },
+      {
+        original: Shoesimgd2,
+        thumbnail: Shoesimgd2,
+      },
+      {
+        original: Shoesimgdetails3,
+        thumbnail: Shoesimgdetails3,
+      },
+    ],
+    head: "",
+    price: "",
+    Aboutpara: "",
+    Aboutpara1: "",
+    Aboutpara2: "",
+    Aboutpara3: "   ",
+    Aboutpara4: "",
+  },
+];
+    const [Increment, setIncrement] = useState(0);
+    const [Dec, setDec] = useState();
+    const handleIncrement = () => {
+      setIncrement(Increment + 1);
+    };
+    const HandleDecrement = () => {
+      if (Increment > 0) {
+        setIncrement(Increment - 1);
+      }
+    };
